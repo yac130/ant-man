@@ -1,1 +1,704 @@
+body {
+	background: #fff;	
+    font-style: normal;
+    font-weight: normal;
+	margin: 0;  
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+ul,li{
+	list-style-type: none;
+	padding: 0;
+}
 
+/*** fonts ***/
+
+@font-face {
+    font-family: 'prelobook_italic';
+    src: url('/especiales/ant-man/fonts/Prelo-Book Italic-webfont.eot');
+    src: url('/especiales/ant-man/fonts/Prelo-Book Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/Prelo-Book Italic-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/Prelo-Book Italic-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/Prelo-Book Italic-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/Prelo-Book Italic-webfont.svg#prelobook_italic') format('svg');
+}
+@font-face {
+    font-family: 'prelobook';
+    src: url('/especiales/ant-man/fonts/Prelo-Book-webfont.eot');
+    src: url('/especiales/ant-man/fonts/Prelo-Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/Prelo-Book-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/Prelo-Book-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/Prelo-Book-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/Prelo-Book-webfont.svg#prelobook') format('svg');
+}
+@font-face {
+    font-family: 'prelomedium';
+    src: url('/especiales/ant-man/fonts/Prelo-Medium-webfont.eot');
+    src: url('/especiales/ant-man/fonts/Prelo-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/Prelo-Medium-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/Prelo-Medium-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/Prelo-Medium-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/Prelo-Medium-webfont.svg#prelomedium') format('svg');
+}
+@font-face {
+    font-family: 'prelosemibold';
+    src: url('/especiales/ant-man/fonts/Prelo-SemiBold-webfont.eot');
+    src: url('/especiales/ant-man/fonts/Prelo-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/Prelo-SemiBold-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/Prelo-SemiBold-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/Prelo-SemiBold-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/Prelo-SemiBold-webfont.svg#prelosemibold') format('svg');
+}
+@font-face {
+    font-family: 'prelobold';
+    src: url('/especiales/ant-man/fonts/Prelo-Bold-webfont.eot');
+    src: url('/especiales/ant-man/fonts/Prelo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/Prelo-Bold-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/Prelo-Bold-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/Prelo-Bold-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/Prelo-Bold-webfont.svg#prelobold') format('svg');
+}
+@font-face {
+    font-family: 'preloblack';
+    src: url('/especiales/ant-man/fonts/Prelo-Black-webfont.eot');
+    src: url('/especiales/ant-man/fonts/Prelo-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/Prelo-Black-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/Prelo-Black-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/Prelo-Black-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/Prelo-Black-webfont.svg#preloblack') format('svg');
+}
+@font-face {
+    font-family: 'prelo_condensedbook';
+    src: url('/especiales/ant-man/fonts/prelocondensed-book-webfont.eot');
+    src: url('/especiales/ant-man/fonts/prelocondensed-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/prelocondensed-book-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/prelocondensed-book-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/prelocondensed-book-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/prelocondensed-book-webfont.svg#prelo_condensedbook') format('svg');
+}
+@font-face {
+    font-family: 'prelo_condensedextrabold';
+    src: url('/especiales/ant-man/fonts/prelocondensed-extrabold-webfont.eot');
+    src: url('/especiales/ant-man/fonts/prelocondensed-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/ant-man/fonts/prelocondensed-extrabold-webfont.woff2') format('woff2'),
+         url('/especiales/ant-man/fonts/prelocondensed-extrabold-webfont.woff') format('woff'),
+         url('/especiales/ant-man/fonts/prelocondensed-extrabold-webfont.ttf') format('truetype'),
+         url('/especiales/ant-man/fonts/prelocondensed-extrabold-webfont.svg#prelo_condensedextrabold') format('svg');
+}
+.clear{
+	clear: both;
+}
+
+.header{
+	background: #000;
+	position: relative;
+}
+	.ctn-header{
+		height: 411px;
+		margin: 0 auto;
+		max-width: 1200px;
+		position: relative;
+	}
+		.logo-comercio{			
+			text-align: center;
+		}
+			.logo-comercio a{
+				background: url(/especiales/ant-man/img/sprites.png) no-repeat 0 -2px;
+				float: left;				
+				height: 32px;
+				margin: 10px 0;
+				margin-left: 50px;
+				text-indent: -99999px;
+				width: 255px;
+			}
+		#social{
+			position: absolute;
+			right: 45px;
+			top: 0;
+		}
+			#social ul{
+				display: inline-block;
+				margin: 10px 0;
+				padding: 0;
+			}
+				#social ul li{
+					display: inline-block;
+					vertical-align: top;
+				}
+					#social ul li a{
+						display: block;
+						height: 31px;
+						margin: 0 2px;
+						text-indent: -99999px;
+						width: 31px;
+					}
+						#social ul li a#facebook{
+							background: url(/especiales/ant-man/img/sprites.png) no-repeat -2px -35px;
+						}
+						#social ul li a#twitter{
+							background: url(/especiales/ant-man/img/sprites.png) no-repeat -37px -35px;
+						}
+		.ctn-header h1{
+			color: #fff;
+			font: 75px/75px 'preloblack';
+			margin: 25px auto 0;
+			text-align: center;
+		}
+			.ctn-header h1 span{
+				background: url(/especiales/ant-man/img/logo-antman.jpg) no-repeat 0 0;
+				display: inline-block;
+				height: 240px;
+				text-indent: -9999px;
+				width: 800px;
+			}
+		.border-ctn-header{
+			background: url(/especiales/ant-man/img/bg-hormigas-header.jpg) no-repeat 0 0;
+			height: 55px;
+		}
+
+.contenedor{
+	margin: 70px auto 0;
+	position: relative;
+}
+	.contenedor h2{
+		font: 24px/28px 'prelobook';
+		margin: 0 auto 10px;
+  		max-width: 795px;
+  		text-align: center;
+	}
+	.separador{
+		background: url(/especiales/ant-man/img/linea-bloque.jpg) no-repeat 0 0;
+		height: 35px;
+		margin: 30px auto;
+		width: 813px;
+	}
+	.bloque{
+		margin: 10px auto 0;
+		width: 795px;
+	}
+		.bloque h3{
+			font: 22px/25px 'prelobold';	
+			text-transform: uppercase;
+			text-align: center;
+		}	
+		.bloque p,
+		.box-curiosidades p{
+			font: 18px/24px 'prelobook';
+			margin: 5px auto;
+		}	
+			.bajada{
+				margin: 5px auto 30px !important;
+				text-align: center;
+			}
+		ul.menu-vistas{
+			cursor: pointer;
+			display: block;
+			margin: 0;
+		}	
+			ul.menu-vistas li{
+				color: #8b8989;
+				display: inline-block;
+				font: 16px/20px 'prelomedium';
+				vertical-align: top;
+				width: 110px;
+			}
+			ul.menu-vistas li:nth-child(2){
+				margin-left: 15px;
+			}
+				ul.menu-vistas li i{
+					display: block;
+					float: left;
+					height: 44px;
+					margin-right: 5px;
+					vertical-align: top;
+					width: 45px;
+				}
+					i.icono-hormiga{
+						background: url(/especiales/ant-man/img/sprites.png) no-repeat -71px -36px;
+					}
+					i.icono-humano{
+						background: url(/especiales/ant-man/img/sprites.png) no-repeat -118px -36px;
+					}			
+			ul.menu-vistas li:hover {
+				color: #e93b2c;
+			}
+				ul.menu-vistas li:hover i.icono-hormiga{
+					background-position: -71px -84px;
+				}
+				ul.menu-vistas li:hover i.icono-humano{
+					background-position: -118px -84px;
+				}
+			ul.menu-vistas li.active{
+				color: #e93b2c;
+			}
+				ul.menu-vistas li.active i.icono-hormiga{
+					background-position: -71px -84px;
+				}
+				ul.menu-vistas li.active i.icono-humano{
+					background-position: -118px -84px;
+				}
+
+		.main-vistas{
+			height: 545px;
+			margin: 0 auto;
+			position: relative;		
+			width: 1030px;		
+		}				
+			.vista-humano{
+				background: url(/especiales/ant-man/img/bg-antman-grande.jpg) no-repeat;
+				height: 520px;
+				margin: 0 auto;
+				position: absolute;
+				width: 1030px;				
+			}	
+
+			/*** efecto zoom ***/
+			.magnify {	
+				margin: 25px auto 0; 
+				position: relative;
+				width: 1030px; 
+			}
+			.large {
+				background: url(/especiales/ant-man/img/bg-antman-grande.jpg) no-repeat;
+				border-radius: 100%;
+				display: none;
+				height: 300px;
+				position: absolute;
+				width: 300px; 
+				
+				/*Multiple box shadows to achieve the glass effect*/
+				box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
+							0 0 7px 7px rgba(0, 0, 0, 0.25), 
+					  inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+			}
+			.small { 
+				display: block; 
+			}
+
+		/*** tablas retos ***/
+		canvas{
+			/*display: none;*/
+			/*height: 0px ;
+  			width: 0px ;*/
+		}
+		.etabs { 
+			margin: 0;			
+			padding: 0; 
+			text-align: center;
+		}
+			.tab { 
+				border: solid 1px #e93b2c;
+				border-bottom: none;
+				display: inline-block;			
+				max-width: 190px;	
+				*display:inline;			
+				zoom:1; 
+			}
+				.tab a {
+					color: #000;
+				  	display: block; 
+				  	font: 14px/16px 'prelobold';
+				  	outline: none;
+				  	padding: 10px;
+				  	text-align: center;
+				  	text-decoration: none; 
+				  	text-transform: uppercase;				  	
+				}
+					.tab a:hover { 
+						background: #e93b2c;
+						color: #fff;
+					}
+					.tab.active { 
+						background: #fff;
+						border-color: #e93b2c; 
+						position: relative; 
+						top: 1px; 						
+					}
+						.tab a.active { 
+							background: #e93b2c;
+							color: #fff;
+						}
+					.tab-container .panel-container { 
+						background: #fff; 
+						border: solid 1px #e93b2c; 
+						min-height: 360px; 
+						padding: 10px; 
+					}
+				.box-texto-tab{
+					display: inline-block;
+					vertical-align: top;
+					width: 370px;
+				}	
+					span.titulo{
+						font: 18px/20px 'prelobold';
+						text-transform: uppercase;
+					}
+					span.bold{
+						font-family: 'prelobold';
+					}
+					p.leyenda{
+						font-family: 'prelobook_italic';
+					}
+				.box-animacion{
+					display: inline-block;
+					position: relative;
+					vertical-align: top;
+					width: 370px;
+				}
+					#canvas{
+						margin: 0 auto;
+					}
+						.canvas-1{
+							left: 100px;
+							position: absolute;
+							top: 70px;							
+						}
+							img.reto-1{
+								position: absolute;
+								right: -25px;
+								top: 0;
+								z-index: 10;
+							}
+							img.reto-2{
+								position: absolute;
+								right: 85px;
+  								top: 255px;
+  								z-index: 10;
+							}
+						#swiffycontainer1{
+							left: 40px;
+							position: absolute;
+						  	top: 20px;						  	
+						}
+						#swiffycontainer2{
+							left: 45px;
+							position: absolute;
+						  	top: 0;						  	
+						}
+						#swiffycontainer{
+							right: 20px;
+							position: absolute;
+						  	top: 20px;						  	
+						}
+
+		/*** bloque 3 ***/
+
+		.box-ley{
+			display: inline-block;
+			vertical-align: top;
+			width: 390px;
+		}
+			.box-ley img{
+				display: block;
+				margin: 0 auto;
+			}
+			.borde-separador{
+				background: #e93b2c;
+				display: inline-block;
+				vertical-align: top;
+				height: 425px;
+				margin: 0 2px;
+				width: 3px;
+			}
+		.box-slider{
+			height: 330px;
+			margin: 0 auto;
+			width: 100%;
+		}
+			#slider,
+			.ui-slider{
+				background: #e3e3e3;
+				cursor: url(/especiales/ant-man/img/handler-cursor.png), auto;
+				height: 20px;
+				margin-top: 35px;
+				position: relative;
+				width: 100%;
+			}
+			.ui-slider-handle{
+				background: url(/especiales/ant-man/img/handler.jpg) no-repeat 0 0;				
+				background-size: 100%;
+				bottom: -4px;
+				height: 30px;
+				width: 20px;
+				position: absolute;
+  				z-index: 2;
+			}
+			.peso-1{
+				background: url(/especiales/ant-man/img/peso-1.png) no-repeat 0 0;
+			    height: 260px;		
+			    width: 200px;	    
+			}
+			.peso-2 {
+			    background: url(/especiales/ant-man/img/peso-2.png) no-repeat 0 bottom;
+  				height: 260px;	
+			    width: 133px;
+			}
+			.peso-3 {
+			    background: url(/especiales/ant-man/img/peso-3.png) no-repeat 0 bottom;
+  				height: 260px;	
+			    width: 68px;
+			}
+			.peso-4 {
+			    background: url(/especiales/ant-man/img/peso-4.png) no-repeat 0 bottom;
+  				height: 260px;	
+			    width: 45px;
+			}
+			.peso-5 {
+			    background: url(/especiales/ant-man/img/peso-5.png) no-repeat 0 bottom;
+  				height: 260px;	
+			    width: 45px;
+			}
+			.peso-6 {
+			    background: url(/especiales/ant-man/img/peso-6.png) no-repeat 0 bottom;
+  				height: 260px;	
+			    width: 45px;
+			}
+			.info-peso{
+				bottom: 30px;
+				color: #e93b2c;
+				font: 22px/22px 'prelobold';
+				position: absolute;  
+			}
+				.info-peso-2{
+					left: 20%;
+				}
+				.info-peso-3{
+					left: 40%;
+				}
+				.info-peso-4{
+					left: 60%;
+				}
+				.info-peso-5{
+					left: 80%;
+				}
+				.info-peso-6{
+					left: 98%;
+				}
+
+		/*** bloque 4 ***/
+		.twentytwenty-wrapper,
+		.twentytwenty-horizontal{
+			height: 400px;
+		}
+			.twentytwenty-container{
+				height: 400px;
+				margin-bottom: 25px;
+			}
+			.box-curiosidades{
+				margin: 0 auto;
+				width: 955px;
+			}
+				.separador-hormiga{
+					background: url(/especiales/ant-man/img/hormiga-gris.jpg) no-repeat 0 10px;
+					display: inline-block;
+					height: 160px;
+					vertical-align: top;
+					width: 22px;
+				}
+				.box-curiosidad{
+					display: inline-block;
+					text-align: center;
+					vertical-align: top;
+					width: 200px;
+				}
+					span.numero{
+						border: 5px solid #e93b2c;
+						border-radius: 35px;
+						color: #e93b2c;
+						display: inline-block;
+						font: 35px/45px 'prelobold';
+						height: 42px;
+						text-align: center;
+						vertical-align: top;
+						width: 43px;
+					}
+
+
+		/*** bloque 5 ***/		
+		.slider-videos {
+			height: 505px; 
+			margin: 0 auto;
+			position: relative; 
+			width: 820px;  
+			*zoom:1;
+		}
+		.slider-videos:before, .slider:after { display: table; content: ""; line-height: 0 }
+		.slider-videos:after { clear: both }
+		.slider-videos .ui-content { position: relative; float: left; width: 100%; height: auto; overflow: hidden; }
+			.slider-videos .ui-content .ui-item img { 
+				/*display: block;*/ 
+				min-height: 350px;
+				/*min-width: 1280px;*/
+				vertical-align: middle; 
+			}
+		.slider-videos .ui-inner { width: 100%; float: left; margin-left: 0; }
+		.slider-videos .ui-item { float: left; position: relative; width: 100%; }
+		.slider-videos div.ui-arrows {
+			list-style: none;  
+			margin: 0; 
+			position: absolute;
+			top: 40%;
+			width: 100%;	
+		}
+			.slider-videos div.ui-arrows > ul { 
+				padding: 9px 0 3px;
+			}
+				.ui-arrows a{
+					display: block;
+					text-indent: -99999px;
+				}
+				a.ui-prev{
+					background: url(/especiales/ant-man/img/sprites.png) no-repeat -175px -83px;
+					height: 46px;
+					left: -7%;
+					position: absolute;
+					width: 46px;
+				}
+				a.ui-next{
+					background: url(/especiales/ant-man/img/sprites.png) no-repeat -175px -131px;
+					height: 46px;
+					right: -7%;
+					position: absolute;
+					width: 46px;
+				}
+		.ui-pager{
+			display: none !important;
+		}
+		.slider-videos h4{
+			color: #e93b2c;
+			font: 16px/18px 'prelobold';
+			margin-top: 5px;
+		}
+		.slider-videos h5{
+			color: #292929;
+			font: 16px/18px 'prelobold';
+		}
+		.slider-videos p{
+			font-size: 16px;
+			line-height: 20px;
+			margin: 0 auto;
+		}
+		p.medio{
+			color: #292929;
+			font: 16px/20px 'prelosemibold';
+		}
+			p.medio span{
+				color: #e93b2c;
+			}
+
+		/*** footer ***/
+		.footer{
+			margin: 35px auto 10px;
+			position: relative;
+			width: 860px;
+		}
+			.footer h6{
+				border-top: 1px solid #767676;
+				color: #767676;
+				font: 14px/18px 'prelobook';
+				padding-top: 10px;
+				text-align: center;
+			}	
+				.footer h6 span{
+					font-family: 'prelobold';
+				}
+			.footer::before,
+			.footer::after{
+				content: "";
+				height: 22px;
+				position: absolute;
+				width: 31px;
+			}
+			.footer::before{
+				background: url(/especiales/ant-man/img/hormiga-izq.jpg) no-repeat 0 0;	
+				top: -11px;
+			}	
+			.footer::after{
+				background: url(/especiales/ant-man/img/hormiga-der.jpg) no-repeat 0 0;	
+				right: 0;
+				top: -11px;
+			}
+		.footer-ant-man{
+			background: url(/especiales/ant-man/img/bg-footer.png) repeat;
+			height: 75px;
+			width: 100%;
+		}
+			.ant-footer{
+				background: url(/especiales/ant-man/img/ant-man-footer.png) no-repeat 0 0;
+				height: 75px;
+				margin: 0 auto;
+				width: 60px;
+			}
+
+/** browser alert**/
+
+#browserWarning { 
+	display: none; 
+}
+
+
+/* IE8 (via Keith Clarke) */
+@media \0screen { 
+	#browserWarning{
+		background: url(/especiales/ant-man/img/bg-trans.png) repeat\0/;
+		display: block\0/;
+		height: 100%\0/;
+		position: fixed\0/;
+		width: 100%\0/;	
+		z-index: 999999\0/;		
+	}
+		.ctn-bg-ie8{
+			left: 50%\0/;
+			margin: -150px auto 0 -350px\0/;
+			position: absolute\0/;
+			top: 50%\0/;
+			width: 800px\0/;
+		}
+			.ctn-bg-ie8 h1{
+				color: #fff\0/;
+				font: 28px/30px arial\0/;
+				text-align: center\0/;
+				text-transform: uppercase\0/;
+			}
+			.ctn-bg-ie8 ul{
+				/*display: inline-block;*/
+				margin: 0 auto\0/;
+				text-align: center\0/;
+			}
+				.ctn-bg-ie8 ul li{
+					display: inline-block\0/;
+					text-align: center\0/;
+				}
+					.ctn-bg-ie8 ul li a{
+						display: inline-block\0/;
+						margin: 0 10px\0/;
+					}
+						.ctn-bg-ie8 ul li a.chrome{
+							background: url(/especiales/ant-man/img/sprites-navegadores.png) no-repeat 0 0\0/;
+							height: 90px\0/;
+							width: 90px\0/;
+						}
+						.ctn-bg-ie8 ul li a.firefox{
+							background: url(/especiales/ant-man/img/sprites-navegadores.png) no-repeat -215px 0\0/;
+							height: 90px\0/;
+							width: 90px\0/;
+						}
+						.ctn-bg-ie8 ul li a.explorer{
+							background: url(/especiales/ant-man/img/sprites-navegadores.png) no-repeat -105px 0\0/;
+							height: 90px\0/;
+							width: 90px\0/;
+						}
+						.ctn-bg-ie8 ul li a.safari{
+							background: url(/especiales/ant-man/img/sprites-navegadores.png) no-repeat -329px 0\0/;
+							height: 90px\0/;
+							width: 90px\0/;
+						}
+		.slider-videos{
+			display: none;
+		}
+
+}
